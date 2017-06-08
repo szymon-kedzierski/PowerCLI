@@ -1,6 +1,6 @@
 curl -X GET \
-  'https://vROPS/suite-api/api/' \
-  -H 'authorization: Basic XXXX' \
+  'https://vROPS/suite-api/api/{CALL}' \
+  -H 'authorization: Basic {XXXX}' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/xml' \
   -H 'postman-token: 4739ef13-976e-f4d3-a3d4-afd29806b39c'
