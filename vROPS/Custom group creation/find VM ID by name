@@ -1,0 +1,9 @@
+curl -X GET \
+  'https://vROPS/suite-api/api/resources?name=VM_NAME' \
+  -H 'authorization: X' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: dea229ff-11f8-542e-31ec-6f0a40f7206a'
+
+Response:
+<ops:resource creationTime="X" identifier="ID">

@@ -1,0 +1,22 @@
+curl -X POST \
+  https://VROPS/suite-api//api/resources/adapters/Container_ID \
+  -H 'authorization: X' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: c7807db4-9ee4-83a5-22eb-f3619a495f4c' \
+  -d '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ops:resource xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ops="http://webservice.vmware.com/vRealizeOpsMgr/1.0/">
+<ops:description>Description of this group</ops:description>
+<ops:resourceKey>
+<ops:name>group name</ops:name>
+<ops:adapterKindKey>Container</ops:adapterKindKey>
+<ops:resourceKindKey>group type</ops:resourceKindKey>
+<ops:resourceIdentifiers/>
+</ops:resourceKey>
+<ops:credentialInstanceId/>
+<ops:resourceStatusStates/>
+<ops:dtEnabled>true</ops:dtEnabled>
+<ops:badges/>
+</ops:resource>'
+
+Response:<ops:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ops="http://webservice.vmware.com/vRealizeOpsMgr/1.0/" identifier="ID">

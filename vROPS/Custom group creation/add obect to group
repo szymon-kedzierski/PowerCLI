@@ -1,0 +1,12 @@
+curl -X POST \
+  https://vROPS/suite-api/api/resources/{Group_ID}/relationships/children \
+  -H 'authorization: X' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: 62353065-ff59-4ea9-c54e-becc8b7d5acf' \
+  -d '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ops:uuid-values xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ops="http://webservice.vmware.com/vRealizeOpsMgr/1.0/">
+<ops:uuids>{Object_ID}</ops:uuids>
+</ops:uuid-values>'
+
+Response: 204

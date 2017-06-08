@@ -1,0 +1,8 @@
+curl -X PUT \
+  https://vROPS/suite-api/api/resources/{Group_ID}/monitoringstate/start \
+  -H 'authorization: X' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: 77221a2a-b7c7-22ea-ccf9-a6b568b5b88d'
+
+Response: 200
