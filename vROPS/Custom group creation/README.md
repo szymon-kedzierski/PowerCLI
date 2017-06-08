@@ -1,6 +1,7 @@
-<b>Create custom group via API</b>
+#Create custom group via API
 
-1. Create group tyspe in GUI
+##1. Create group tyspe in GUI
+
 To create a custom group you always need a group type. This group type is internally defined as a so called resourceKind. This is a type defined in the default container. You are not able to create group type by official API, only external API have such call therefore we will use GUI for that (one time action).
 2. First you need to obtain ID of the default container:
 GET https://vROPS/suite-api/api/resources?name=Container
