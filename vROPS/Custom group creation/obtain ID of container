@@ -1,0 +1,9 @@
+curl -X GET \
+  'https://vROPS/suite-api/api/resources?name=container' \
+  -H 'authorization: X' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: 99e5f705-c2f0-0588-42a0-c15ddda8d926'
+
+Response:
+<ops:resource creationTime="X" identifier="ID">
