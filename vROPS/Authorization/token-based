@@ -1,0 +1,13 @@
+curl -X POST \
+  https://vROPS/suite-api/api/auth/token/acquire \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: d0aa33ee-4ff6-fe4f-b618-872bade65420' \
+  -d '{
+ "username" : "user",
+ "password" : "password"
+}'
+
+Request header example:
+GET https://vRealize.example.com/api/adapterkinds
+Authorization: vRealizeOpsToken <vROps_token>
