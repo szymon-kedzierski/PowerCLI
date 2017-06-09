@@ -1,0 +1,5 @@
+curl -X GET \
+  http://vROPS/suite-api/api/resources/VM_ID/statkeys \
+  -H 'authorization: X' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 7aed6305-558b-0e04-cb16-47dfe2bdae4f'

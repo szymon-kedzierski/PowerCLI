@@ -1,0 +1,5 @@
+curl -X GET \
+  http://VROPS/suite-api/api/adapterkinds/VMWARE/resourcekinds/VirtualMachine/statkeys \
+  -H 'authorization: X \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: b09f2311-2f44-8bf2-fbda-8446f1cb5693'

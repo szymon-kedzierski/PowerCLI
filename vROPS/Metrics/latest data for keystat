@@ -1,0 +1,24 @@
+curl -X GET \
+  'https://vROPS/suite-api/api/resources/stats/latest?resourceId=VM_ID&statKey=cpu|usage_average' \
+  -H 'authorization: X \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml;charset=utf-8' \
+  -H 'postman-token: 42106ac8-4b89-7746-7065-f1d7711fd081' \
+  -d '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+  Response:
+`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ops:stats-of-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ops="http://webservice.vmware.com/vRealizeOpsMgr/1.0/">
+    <ops:stats-of-resource>
+        <ops:resourceId>bab6715f-701c-45e4-ace3-bfd2d3bd4917</ops:resourceId>
+        <ops:stat-list>
+            <ops:stat>
+                <ops:timestamps>1497018056574</ops:timestamps>
+                <ops:statKey>
+                    <ops:key>cpu|usage_average</ops:key>
+                </ops:statKey>
+                <ops:data>0.8953333497047424</ops:data>
+            </ops:stat>
+        </ops:stat-list>
+    </ops:stats-of-resource>
+</ops:stats-of-resources>`

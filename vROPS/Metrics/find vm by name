@@ -1,0 +1,6 @@
+curl -X GET \
+  'https://VROPS/suite-api/api/resources?name=NAME' \
+  -H 'authorization: X' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: 0657055f-aa37-510f-f27a-c0e4f8ce1434'
