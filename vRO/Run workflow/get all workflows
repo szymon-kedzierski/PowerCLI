@@ -1,0 +1,6 @@
+curl -X GET \
+  https://vRO:8281/vco/api/workflows \
+  -H 'authorization: Basic XX' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: 8e682dbb-7171-c0ef-ec7c-0fa73a4b3bda'

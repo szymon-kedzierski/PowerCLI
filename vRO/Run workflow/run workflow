@@ -1,0 +1,13 @@
+curl -X POST \
+  https://vRO:8281/vco/api/workflows/{workflow_ID}/executions/ \
+  -H 'authorization: Basic XXX' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: 387b8af9-4717-a7b8-9b1f-cfe3a3b2ffec' \
+  -d '<execution-context xmlns="http://www.vmware.com/vco">
+    <parameters>
+        <parameter type="string" name="par1" scope="local">
+            <string>Value1</string>
+        </parameter>
+    </parameters>
+</execution-context>'
