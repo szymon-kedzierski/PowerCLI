@@ -62,4 +62,11 @@ Body:
 
 Response: 200
 
-A se result you have custom group with static member.
+As a result you have custom group with static member.
+
+## 7. Delete VM from custom group
+
+`DELETE https://vROPS/suite-api/api/resources/{GROUP_ID}/relationships/children/{VM_ID}`
+
+Response: 204
+

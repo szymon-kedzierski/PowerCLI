@@ -1,0 +1,8 @@
+curl -X DELETE \
+  https://vROPS/suite-api/api/resources/{GROUP_ID}/relationships/children/{VM_ID} \
+  -H 'authorization: XX' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: 5b7f0846-e57a-a611-7dee-796e23a2a5c9' 
+
+ Response: 204
