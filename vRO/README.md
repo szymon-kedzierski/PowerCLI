@@ -2,6 +2,6 @@
 
 My adventure with VRO API
 
-## TO access documentation
+## To access documentation
 
 `https://vRO:8281/vco/api/docs/index.html`
