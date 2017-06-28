@@ -1,0 +1,8 @@
+curl -X GET \
+  https://vROPS/suite-api/api/resources/{GROUP_ID}/relationships/children 
+  -H 'authorization: Basic XXX' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/xml' \
+  -H 'postman-token: 24f55eee-3a8d-33f3-f322-feff84d95151'
+
+Response: 200
