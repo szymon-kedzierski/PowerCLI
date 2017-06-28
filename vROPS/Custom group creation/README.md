@@ -73,3 +73,5 @@ Response: 204
 ## 8. Get children of a group
 
 `https://VROPS/suite-api/api/resources/{GROUP_ID}/relationships/children`
+
+Response: 200
