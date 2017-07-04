@@ -1,0 +1,6 @@
+curl -X GET \
+  https://vCD/api/ \
+  -H 'accept: application/*+xml;version=9.0' \
+  -H 'authorization: Basic XXX' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 3dcbbf90-dac7-fc6c-5626-88b37117c987'

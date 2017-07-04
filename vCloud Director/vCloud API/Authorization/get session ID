@@ -1,0 +1,9 @@
+curl -X POST \
+  https://vCD/api/sessions \
+  -H 'accept: application/*+xml;version=9.0' \
+  -H 'authorization: Basic XXX' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: a782cae6-6041-2ae1-32cd-9c6a3b83a831'
+  
+  Header:
+  x-vcloud-authorization VCD_ID
