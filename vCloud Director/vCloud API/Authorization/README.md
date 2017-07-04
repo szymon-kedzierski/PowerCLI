@@ -5,14 +5,10 @@
 First use Basic authentication to obtain session ID:
 `POST https://vCD/api/sessions`
 
-Header:
+Header response:
+...
 
-Content-Length ›1521
-Content-Type ›application/vnd.vmware.vcloud.session+xml;version=9.0
-Date ›Tue, 04 Jul 2017 08:34:56 GMT
-X-VMWARE-VCLOUD-REQUEST-EXECUTION-TIME ›189
-X-VMWARE-VCLOUD-REQUEST-ID › {request_ID}
-<b> x-vcloud-authorization › {auth_ID} </b>
+x-vcloud-authorization â€º {auth_ID} </b>
 
 ## 2. Now you can use this {auth_ID} in requests
 
