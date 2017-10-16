@@ -1,4 +1,4 @@
-# VMware vCloud Director FOG sscripts
+# VMware vCloud Director FOG scripts
 
 ## FOG repo
 
