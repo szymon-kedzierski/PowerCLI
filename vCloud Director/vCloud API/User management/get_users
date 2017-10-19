@@ -1,0 +1,7 @@
+curl -X GET \
+  https://vcd/api/admin/org/Org_ID \
+  -H 'accept: application/*+xml;version=9.0' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/vnd.vmware.admin.user+xml' \
+  -H 'postman-token: 1b919698-b16f-dfe8-6c64-6026f5d41ff5' \
+  -H 'x-vcloud-authorization: XXX'
