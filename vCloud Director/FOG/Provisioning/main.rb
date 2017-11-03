@@ -22,16 +22,20 @@ while  (xlsx.sheet('VM').cell(row,1) != nil) do
     params1 = ProvisioningParameters.new(xlsx, row)
     post_params1 = PostProvisioningParameters.new(xlsx, row)
     vm1 = VM_vCD.new(connection_vCD1, params1, post_params1)
+    
+   
 
     vm1.provision_vm
     vm1.postprovision_vm
     vm1.start_vm_force_cust
+    vm1.get_vm
     vm1.print_vm
 
     # if vm exist you can get object by:
     #vm1.get_vm
     #vm1.print_vm
 
+   
     row+=1
 
 end

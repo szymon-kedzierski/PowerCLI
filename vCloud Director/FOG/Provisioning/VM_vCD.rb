@@ -9,9 +9,20 @@ class VM_vCD
     end
 
     def start_vm_force_cust
-        @connection.post_deploy_vapp(@vm.id, forceCustomization:true)
-        @vapp.power_on
-        #@vapp.wait_for { ready? }
+        puts "Starting VM #{@vm.name} with recustomization."
+
+        if (@vm.status == "on")
+            puts " VM #{@vm.name} is already started. Unable to customize."
+        else
+            @connection.post_deploy_vapp(@vm.id, forceCustomization:true)
+            @vapp.power_on
+            @vm.wait_for { ready? }
+            if (@vm.status == "on")
+                puts "VM #{@vm.name} started."
+            else
+                puts "Failed to start VM."
+            end
+        end
     end
 
     def get_vm
@@ -27,6 +38,9 @@ class VM_vCD
         
         @vm = @vapp.vms.first
         raise "No VM #{@vm}!" if @vm == nil
+
+        #puts "Got VM #{@vm.name}"
+        @vm
     end
 
     def print_vm
@@ -38,7 +52,9 @@ class VM_vCD
     end
 
     def provision_vm
-        
+
+        puts "Provisioning vApp..."
+
         org = @connection.organizations.get_by_name(@prov_params.org_name)
         raise "Organization not found!" if org == nil
 
@@ -62,17 +78,19 @@ class VM_vCD
             )
             @vapp = vdc.vapps.get_by_name(@prov_params.vapp_name)
             @vm = @vapp.vms.first #only one vm in vapp possible for now
-           raise "Not able to create VM!" if @vm == nil
+           raise "Not able to create vApp!" if @vm == nil
            @vm
         else
-            raise "vApp already exists"
+            raise "vApp already exists."
         end
-     
+        puts "VM #{@vm.name} provisioned."
+        @vm
     end
 
     def postprovision_vm
 
         #assign network to VM
+        puts "Assigning network #{network.network} to VM #{@vm.name}..."
         network = @vm.network
         network.reload
         network.is_connected = true
@@ -84,27 +102,53 @@ class VM_vCD
         network.mac_address = ''
         network.save
         network.reload
-        raise "Network not assigned" if network.network == nil
+        raise "Network not assigned." if network.network == nil
+        puts "Network #{network.network} assigned to VM #{@vm.name} "
 
-        # VM name
-        #@connection.put_vm(@vm.id,@vm_name)
+        # VM name change
+        ret = @connection.put_vm(@vm.id,@post_prov_param.vm_name,{})
+        task_id= ret.data[:body][:id].split(':').last
+        puts "Changing VM name..."
+        Fog::wait_for(360,5){
+            @task = @connection.tasks.get(task_id)
+            @task.status == 'success'
+        }
+        if @task.status == 'failed'
+        puts "VM name changed."
 
-        #hardware
+        #CPU
+        puts "Setting CPU count..."
         @vm.cpu = @post_prov_param.cpu
-        @vm.memory = @post_prov_param.mem
-        #@vm.disks.first.capacity = @post_prov_param.disk_size
+        puts "CPU set to #{@vm.cpu}."
 
-        # set customization attributes
+        #Memory
+        puts "Setting memory size..."
+        @vm.memory = @post_prov_param.mem
+        puts "Memory set to #{@vm.memory} MB."
+
+        # For now just one disk
+        puts "Changing disk size."
+        disk = @vm.disks.get_by_name("Hard disk 1")
+        if disk.capacity < @post_prov_param.disk_size
+            disk.capacity = @post_prov_param.disk_size
+            puts "Disk capacity set to #{disk.capacity} MB ."
+        else
+            puts "Setting disk size unsuccessful. Minimal capacity is #{disk.capacity}"
+        end
+
+        # set customization attributes - computer name
+        puts "Setting computer name..."
         customization = @vm.customization
         customization.computer_name = @post_prov_param.computer_name
         customization.enabled = true
         customization.save
+        puts "Computer name set."
     end
     
     def get_tag(name)
         get_vm
         if  @vm.tags.get_by_name(name) != NIL
-        @vm.tags.get_by_name(name).value
+            @vm.tags.get_by_name(name).value
         else
             puts "No metadata #{name} "
         end

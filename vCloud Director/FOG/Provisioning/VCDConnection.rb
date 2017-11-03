@@ -6,7 +6,7 @@ class VCDConnection
     attr_reader :connection
 
     def connect_vCD (xlsx, user, pass)
-
+        puts "Connecting to vCD."
         @connection = Fog::Compute::VcloudDirector.new(
             :vcloud_director_username      => user,
             :vcloud_director_password      => pass,
@@ -18,6 +18,7 @@ class VCDConnection
             if @connection == nil 
                 raise "Connection to vCD was not possible."
             end
+            puts "Connected to vCD."
             @connection
     end
 end
