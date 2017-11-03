@@ -114,6 +114,8 @@ class VM_vCD
             @task.status == 'success'
         }
         if @task.status == 'failed'
+            raise "Changing VM name failed."
+        end
         puts "VM name changed."
 
         #CPU

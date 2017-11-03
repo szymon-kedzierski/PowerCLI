@@ -35,7 +35,7 @@ while  (xlsx.sheet('VM').cell(row,1) != nil) do
     #vm1.get_vm
     #vm1.print_vm
 
-   
+
     row+=1
 
 end
