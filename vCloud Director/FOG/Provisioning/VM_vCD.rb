@@ -90,9 +90,10 @@ class VM_vCD
     def postprovision_vm
 
         #assign network to VM
-        puts "Assigning network #{network.network} to VM #{@vm.name}..."
+       
         network = @vm.network
         network.reload
+        puts "Assigning network #{network.network} to VM #{@vm.name}..."
         network.is_connected = true
         network.network_connection_index = 0
         network.primary_network_connection_index = 0
