@@ -1,4 +1,4 @@
-# Getting all VMs restarted within $days
+# Getting all VMs restarted within $days by HA
 # Input: vCenter IP, days how long in past logs should be checked
 # Author: Szymon Kędzierski
 
