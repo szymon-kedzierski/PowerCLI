@@ -75,7 +75,7 @@ From response you can extract if user is enabled, what role it has, and if it is
 
 `curl -X POST
 -H "Accept: application/*+xml;version=9.0"
--H "x-vcloud-authorization: 9da2c1a6845047ca922d07d7935cfb4a"
+-H "x-vcloud-authorization: XXX"
 -H "Content-Type: application/vnd.vmware.admin.user+xml;version=9.0"
 -d '<?xml version="1.0" encoding="UTF-8"?>
 <User
@@ -96,9 +96,9 @@ Status: 201 Created
 Response body:
 
 `<?xml version="1.0" encoding="UTF-8"?>
-<User xmlns="http://www.vmware.com/vcloud/v1.5" name="user@example.com" id="urn:vcloud:user:374235b1-7622-425c-bf4b-17be26bba6ca" href="https://vcd-portal.vmware.local/api/admin/user/374235b1-7622-425c-bf4b-17be26bba6ca" type="application/vnd.vmware.admin.user+xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1.5 http://vcd-portal.vmware.local/api/v1.5/schema/master.xsd">
-    <Link rel="edit" href="https://vcd-portal.vmware.local/api/admin/user/374235b1-7622-425c-bf4b-17be26bba6ca" type="application/vnd.vmware.admin.user+xml"/>
-    <Link rel="takeOwnership" href="https://vcd-portal.vmware.local/api/admin/user/374235b1-7622-425c-bf4b-17be26bba6ca/action/takeOwnership"/>
+<User xmlns="http://www.vmware.com/vcloud/v1.5" name="user@example.com" id="urn:vcloud:user:374235b1-7622-425c-bf4b-17be26bba6ca" href="https://vcd/api/admin/user/374235b1-7622-425c-bf4b-17be26bba6ca" type="application/vnd.vmware.admin.user+xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1.5 http://vcd/api/v1.5/schema/master.xsd">
+    <Link rel="edit" href="https://vcd/api/admin/user/374235b1-7622-425c-bf4b-17be26bba6ca" type="application/vnd.vmware.admin.user+xml"/>
+    <Link rel="takeOwnership" href="https://vcd/api/admin/user/374235b1-7622-425c-bf4b-17be26bba6ca/action/takeOwnership"/>
     <Telephone/>
     <IsEnabled>true</IsEnabled>
     <IsLocked>false</IsLocked>
@@ -109,7 +109,7 @@ Response body:
     <IsGroupRole>false</IsGroupRole>
     <StoredVmQuota>0</StoredVmQuota>
     <DeployedVmQuota>0</DeployedVmQuota>
-    <Role href="https://vcd-portal.vmware.local/api/admin/role/a08a8798-7d9b-34d6-8dad-48c7182c5f66" name="Organization Administrator" type="application/vnd.vmware.admin.role+xml"/>
+    <Role href="https://vcd/api/admin/role/a08a8798-7d9b-34d6-8dad-48c7182c5f66" name="Organization Administrator" type="application/vnd.vmware.admin.role+xml"/>
     <GroupReferences/>
 </User>`
 
@@ -122,9 +122,9 @@ Curl Example:
 -H "x-vcloud-authorization: 2496325dd20f4ba5b711a07f132b1f48"
 -H "Content-Type: application/vnd.vmware.admin.user+xml;version=9.0"
 -d '<?xml version="1.0" encoding="UTF-8"?>
-<User xmlns="http://www.vmware.com/vcloud/v1.5" name="useeer@example.com" id="urn:vcloud:user:0b684c61-3179-46ac-ac49-5e9951c331d9" href="https://vcd-portal.vmware.local/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9" type="application/vnd.vmware.admin.user+xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1.5 http://vcd-portal.vmware.local/api/v1.5/schema/master.xsd">
-    <Link rel="edit" href="https://vcd-portal.vmware.local/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9" type="application/vnd.vmware.admin.user+xml"/>
-    <Link rel="takeOwnership" href="https://vcd-portal.vmware.local/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9/action/takeOwnership"/>
+<User xmlns="http://www.vmware.com/vcloud/v1.5" name="useeer@example.com" id="urn:vcloud:user:0b684c61-3179-46ac-ac49-5e9951c331d9" href="https://vcd/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9" type="application/vnd.vmware.admin.user+xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1.5 http://vcd/api/v1.5/schema/master.xsd">
+    <Link rel="edit" href="https://vcd/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9" type="application/vnd.vmware.admin.user+xml"/>
+    <Link rel="takeOwnership" href="https://vcd/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9/action/takeOwnership"/>
     <Telephone/>
     <IsEnabled>false</IsEnabled>
     <IsLocked>false</IsLocked>
@@ -135,10 +135,10 @@ Curl Example:
     <IsGroupRole>false</IsGroupRole>
     <StoredVmQuota>0</StoredVmQuota>
     <DeployedVmQuota>0</DeployedVmQuota>
-    <Role href="https://vcd-portal.vmware.local/api/admin/role/a08a8798-7d9b-34d6-8dad-48c7182c5f66" name="Organization Administrator" type="application/vnd.vmware.admin.role+xml"/>
+    <Role href="https://vcd/api/admin/role/a08a8798-7d9b-34d6-8dad-48c7182c5f66" name="Organization Administrator" type="application/vnd.vmware.admin.role+xml"/>
     <GroupReferences/>
 </User>'
-"https://vcd-portal.vmware.local/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9"
+"https://vcd/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9"
  
 Then we execute delete command to user UID
 Curl Example:
@@ -146,7 +146,7 @@ curl -X DELETE
 -H "Accept: application/*+xml;version=9.0"
 -H "x-vcloud-authorization: 2496325dd20f4ba5b711a07f132b1f48"
 -H "Content-Type: application/vnd.vmware.admin.user+xml;version=9.0"
-"https://vcd-portal.vmware.local/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9"
+"https://vcd/api/admin/user/0b684c61-3179-46ac-ac49-5e9951c331d9"
  
 ## 7. User Modification
 There are only possible modification to enable or disable the user.
