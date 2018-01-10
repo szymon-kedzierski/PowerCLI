@@ -70,6 +70,17 @@ Example:
 From response you can extract if user is enabled, what role it has, and if it is SAML user.
 
 ## 4. Get avialiable roles
+From vCD 8.20 roles are assigned to Organization. You can get all roles in specific org by:
+
+`GET https://vcd/api/admin/org/Org_ID`
+
+Response:
+`...
+ <RoleReferences>
+        <RoleReference href="vcd/api/admin/org/ORG_ID/role/ROLE_ID" name="ROLE NAME" type="application/vnd.vmware.admin.role+xml"/>
+        ...
+    </RoleReferences>
+ ...`
 
 ## 5. Create SAML user with specified role
 
