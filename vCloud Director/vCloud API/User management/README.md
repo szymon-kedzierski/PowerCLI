@@ -69,7 +69,7 @@ Example:
  
 From response you can extract if user is enabled, what role it has, and if it is SAML user.
 
-## 4. Get avialiable roles
+## 4. Get available roles
 From vCD 8.20 roles are assigned to Organization. You can get all roles in specific org by:
 
 `GET https://vcd/api/admin/org/Org_ID`
