@@ -9,8 +9,8 @@ Response:
 Extract from response in tag Org – from href part behind …/org/ - this is UID for an organization in vCD.
 
 `<?xml version="1.0" encoding="UTF-8"?>
-<OrgList xmlns="http://www.vmware.com/vcloud/v1.5" href="https://vcd/api/org/" type="application/vnd.vmware.vcloud.orgList+xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1.5 http://vcd-portal.vmware.local/api/v1.5/schema/master.xsd">
-    <Org href="https://vcd-portal.vmware.local/api/org/Org_ID" name="OrgNAME" type="application/vnd.vmware.vcloud.org+xml"/>
+<OrgList xmlns="http://www.vmware.com/vcloud/v1.5" href="https://vcd/api/org/" type="application/vnd.vmware.vcloud.orgList+xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1.5 http://vcd/api/v1.5/schema/master.xsd">
+    <Org href="https://vcd/api/org/Org_ID" name="OrgNAME" type="application/vnd.vmware.vcloud.org+xml"/>
 </OrgList>`
 
 
@@ -44,7 +44,7 @@ Same for groups:
 
 ## 3. Get user info
 
-    `https://vcd-portal.vmware.local/api/admin/user/user_ID`
+    `https://vcd/api/admin/user/user_ID`
 
 Example:
 
