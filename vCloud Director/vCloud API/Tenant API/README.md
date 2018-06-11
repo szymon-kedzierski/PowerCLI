@@ -19,7 +19,6 @@ Example response:
 `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <CurrentUsage xmlns="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:common="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:ns9="http://www.vmware.com/vcloud/networkservice/1.0" xmlns:ns10="http://www.vmware.com/vcloud/networkservice/common/1.0" xmlns:ns11="http://www.vmware.com/vcloud/networkservice/ipam/1.0" xmlns:ns12="http://www.vmware.com/vcloud/versions">
     <Link rel="up" href="https://vcd/api/vApp/vm-{id}]" type="application/vnd.vmware.vcloud.vm+xml"/>
-    
     <Metric name="disk.read.average" unit="KILOBYTES_PER_SECOND" value="0.0"/>
     <Metric name="cpu.usage.average" unit="PERCENT" value="0.62"/>
     <Metric name="disk.write.average" unit="KILOBYTES_PER_SECOND" value="2.0"/>
