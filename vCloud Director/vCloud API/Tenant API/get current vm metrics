@@ -1,0 +1,8 @@
+curl -X GET \
+  https://vCD/api/vApp/vm{id}/metrics/current \
+  -H 'accept: application/*+xml;version=27.0' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/vnd.vmware.admin.user+xml' \
+  -H 'postman-token: 81b672dd-9b70-cbed-6cce-07b16425b439' \
+  -H 'x-vcloud-authorization: XXX' \
+  -d '<?xml version="1.0" encoding="UTF-8"?>
